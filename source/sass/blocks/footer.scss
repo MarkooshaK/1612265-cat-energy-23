@@ -1,0 +1,112 @@
+.footer {
+  background-color: #f2f2f2;
+}
+
+.footer__logo {
+  display: flex;
+  justify-content: center;
+  padding: 31px 0 29px 0;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+.footer__wrapper {
+  margin: 0 20px;
+}
+
+.socials__list {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 18px 0 20px 0;
+  border-bottom: 1px solid #d9d9d9;
+  justify-content: center;
+}
+
+.socials__list li:first-child {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    margin-left: 73px;
+  }
+
+  &::before {
+    content: url("../../img/decor/icon-vk.svg");
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+}
+
+.socials__list li:nth-child(2) {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    margin-left: 32px;
+  }
+
+  &::before {
+    content: url("../../img/decor/icon-instagram.svg");
+    position: absolute;
+    right: 3px;
+    bottom: -1px;
+  }
+}
+
+.socials__list li:last-child {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    background-color: transparent;
+    margin-left: 30px;
+    margin-right: 76px;
+  }
+
+  &::before {
+    content: url("../../img/decor/icon-facebook.svg");
+    position: absolute;
+    left: 36px;
+    bottom: -2px;
+  }
+}
+
+.footer a {
+  font-family: "Arial", sans-serif;
+  color: $special_dark-grey;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 18px;
+  display: block;
+}
+
+.footer__logo-academy {
+  margin: 29px 0 0 0;
+  padding-bottom: 23px;
+}
+
+.footer__logo-academy a {
+  position: relative;
+}
+
+.footer__logo-academy img {
+  margin-left: 134px;
+}
+
+.footer__logo-academy--img {
+  position: absolute;
+  right: 0;
+  top: -7px;
+}

@@ -1,0 +1,75 @@
+.extra h3 {
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: normal;
+  margin: 0;
+  padding: 25px 0 36px 0;
+  position: relative;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.extra__container {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.extra__item p {
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #222222;
+  margin: 0;
+  padding: 13px 0 13px 0;
+}
+
+.extra__item div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.extra__item div > p {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 14px;
+  color: $special_dark-grey;
+  padding: 0 0 15px 0;
+  text-transform: none;
+}
+
+.extra__container button {
+  padding: 10px 0 10px 0;
+  margin-bottom: 17px;
+}
+
+.extra__offer {
+  background: url("../../img/decor/gift-photo.png") no-repeat;
+  background-size: cover;
+  margin-top: 38px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.extra__offer p {
+  display: flex;
+  justify-content: center;
+  max-width: 161px;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  font-weight: normal;
+  margin: 0 0 43px;
+}
+
+.extra__offer span::before {
+  content: "";
+  display: block;
+  background: url("../../img/decor/icon-gift.svg");
+  min-width: 78px;
+  min-height: 80px;
+  margin-top: 58px;
+  margin-bottom: 47px;
+}

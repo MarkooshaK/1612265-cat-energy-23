@@ -1,0 +1,105 @@
+.guide h3 {
+  font-size: 36px;
+  line-height: 40px;
+  color: #000000;
+  font-weight: normal;
+  margin: 27px 0 38px 0;
+}
+
+.guide__wrapper {
+  padding: 0 20px;
+}
+
+.guide-list {
+  list-style-type: none;
+  margin: 0;
+  padding-inline-start: 0;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 4fr;
+  row-gap: 26px;
+}
+
+.guide-list__item {
+  position: relative;
+  grid-column: 1/2;
+}
+
+.guide-list__item-1 {
+  grid-row: 1/2;
+}
+
+.guide-list__item-2 {
+  grid-row: 2/3;
+}
+
+.guide-list__item-3 {
+  grid-row: 3/4;
+}
+
+.guide-list__item-4 {
+  grid-row: 4/5;
+}
+
+.guide-list__item p {
+  font-family: "Arial", sans-serif;
+  color: $special_dark-grey;
+  margin: 0 0 0 80px;
+  max-width: 70%;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: $basic_green;
+    position: absolute;
+    left: 0;
+    top: -2px;
+  }
+}
+
+.guide-list__item-1 {
+  position: relative;
+
+  &::after {
+    content: url("../../img/decor/icon-guide-1.svg");
+    position: absolute;
+    top: 15px;
+    left: 19px;
+  }
+}
+
+.guide-list__item-2 {
+  position: relative;
+
+  &::after {
+    content: url("../../img/decor/icon-guide-2.svg");
+    position: absolute;
+    top: 10px;
+    left: 15px;
+  }
+}
+
+.guide-list__item-3 {
+  position: relative;
+
+  &::after {
+    content: url("../../img/decor/icon-guide-3.svg");
+    position: absolute;
+    top: 12px;
+    left: 17px;
+  }
+}
+
+.guide-list__item-4 {
+  position: relative;
+
+  &::after {
+    content: url("../../img/decor/icon-guide-4.svg");
+    position: absolute;
+    top: 13px;
+    left: 16px;
+  }
+}
+
