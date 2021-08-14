@@ -1,0 +1,145 @@
+.header__wrapper {
+  margin: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header__logo {
+  padding: 10px 0 15px;
+}
+
+.logo {
+  text-decoration: none;
+
+  img:first-child {
+    padding-right: 52px;
+  }
+
+  img:last-child {
+    padding: 0 65px 7px 0;
+  }
+}
+
+.logo:hover {
+  opacity: 80%;
+}
+
+.logo:active {
+  opacity: 60%;
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+
+  .nav-list__item a {
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.nav-list__item a:hover:not(.nav-list__item--active) {
+  color: #666666;
+}
+
+.nav-list__item a:active:not(.nav-list__item--active) {
+  color: #b3b3b3;
+}
+
+.nav-list__item--active {
+  border-bottom: 2px solid $basic_green;
+  padding: 10px 0 8px 0;
+}
+
+.nav-list__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 66px;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.nav-list__item {
+  height: 66px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #e6e6e6;
+}
+
+.nav-list__wrapper li:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.nav__toggle {
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  right: 20px;
+  top: 24px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  border-bottom: 2px solid #c4c4c4;
+  border-top: 2px solid #c4c4c4;
+
+  &::before {
+    content: "";
+    height: 2px;
+    width: 24px;
+    background: #c4c4c4;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 6px;
+  }
+}
+
+.nav__toggle--close {
+  color: transparent;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: #000000;
+    position: absolute;
+    bottom: 7px;
+    transform: rotate(312deg);
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 25px;
+    background-color: #000000;
+    position: absolute;
+    top: 5px;
+    transform: rotate(48deg);
+  }
+}
+
+.header-form {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    min-width: 320px;
+    height: 1px;
+    background: #ebebeb;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}

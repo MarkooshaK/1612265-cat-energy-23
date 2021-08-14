@@ -1,0 +1,85 @@
+.promo {
+  background-color: rgba(104, 183, 56, 0.85);
+  display: block;
+  position: relative;
+
+  &::after {
+    content: "";
+    background: url("../img/decor/index-cat-background.jpg")  no-repeat;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+    max-height: 306px;
+  }
+
+  &::before {
+    content: "";
+    background-color: #ffffff;
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 178px;
+    z-index: 0;
+  }
+}
+
+.promo__wrapper {
+  padding: 0 20px;
+}
+
+.promo h3 {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  color: #ffffff;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  margin: 0;
+  padding: 27px 0 25px 0;
+  justify-content: center;
+}
+
+.promo p {
+  margin: 0;
+  display: flex;
+  line-height: 14px;
+  color: #ffffff;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 29px;
+}
+
+.promo__img {
+  display: flex;
+  justify-content: center;
+}
+
+.promo img {
+  position: relative;
+}
+
+.promo a {
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: $basic_green;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+
+  &:hover {
+    background-color: $basic_green-2;
+  }
+
+  &:active {
+    color: rgba($color: #ffffff, $alpha: 0.3);
+  }
+}
