@@ -1,0 +1,12 @@
+.map iframe {
+  min-width: 320px;
+  width: 100%;
+  @media (min-width: $tablet-width) {
+    min-width: 768px;
+    min-height: 400px;
+  }
+}
+
+.map {
+  background-color: #f2f2f2;
+}
