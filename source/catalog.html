@@ -5,6 +5,10 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -13,24 +17,29 @@
     <div class="header__wrapper">
       <div class="header__logo">
         <a class="logo" href="index.html">
-          <img id="page-start" src="img/logo-cat.svg" width="34" height="38" alt="Логотип c котом">
-          <img src="img/logo-text.svg" width="101" height="18" alt="Логотип «Кэт энерджи»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+            <img src="img/header-logo.svg" width="191" height="38" alt="Логотип «Кэт энерджи»">
+          </picture>
         </a>
       </div>
       <nav class="header__nav">
         <button class="nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
-        <ul class="nav-list visually-hidden">
-          <div class="nav-list__wrapper">
-            <li class="nav-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__item--active">Каталог продукции</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </div>
+        <ul class="nav-list ">
+          <li class="nav-list__wrapper">
+            <ul>
+              <li class="nav-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__item-link nav-list__item-link--active">Каталог продукции</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -44,7 +53,10 @@
         <h2>Каталог продукции</h2>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--small" src="img/catalog-1-small.png" width="68" height="86" alt="Оранжевая упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-1-small-desktop.png 1x, img/catalog-1-small-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--small" src="img/catalog-1-small.png" srcset="img/catalog-1-small.png 1x, img/catalog-1-small@2x.png 2x" width="68" height="86" alt="Оранжевая упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -67,7 +79,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--big" src="img/catalog-1-big.png" width="84" height="101" alt="Оранжевая упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-1-big-desktop.png 1x, img/catalog-1-big-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--big" src="img/catalog-1-big.png" srcset="img/catalog-1-big.png 1x, img/catalog-1-big@2x.png 2x" width="84" height="101" alt="Оранжевая упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -90,7 +105,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--small" src="img/catalog-2-small.png" width="68" height="78" alt="Зелёная упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-2-small-desktop.png 1x, img/catalog-2-small-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--small" src="img/catalog-2-small.png" srcset="img/catalog-2-small.png 1x, img/catalog-2-small@2x.png 2x" width="68" height="78" alt="Зелёная упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -113,7 +131,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--big" src="img/catalog-2-big.png" width="84" height="101" alt="Зелёная упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-2-big-desktop.png 1x, img/catalog-2-big-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--big" src="img/catalog-2-big.png" srcset="img/catalog-2-big.png 1x, img/catalog-2-big@2x.png 2x" width="84" height="101" alt="Зелёная упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -136,7 +157,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--small" src="img/catalog-3-small.png" width="68" height="78" alt="Синяя упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-3-small-desktop.png 1x, img/catalog-3-small-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--small" src="img/catalog-3-small.png" srcset="img/catalog-3-small.png 1x, img/catalog-3-small@2x.png 2x" width="68" height="78" alt="Синяя упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -159,7 +183,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--big" src="img/catalog-3-big.png" width="84" height="100" alt="Синяя упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-3-big-desktop.png 1x, img/catalog-3-big-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--big" src="img/catalog-3-big.png" srcset="img/catalog-3-big.png 1x, img/catalog-3-big@2x.png 2x" width="84" height="100" alt="Синяя упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -182,7 +209,10 @@
         </div>
         <div class="catalog-item">
           <div class="catalog-item__img-container">
-            <img class="catalog-item__img catalog-item__img--small" src="img/catalog-4-small.png" width="72" height="84" alt="Фиолетовая упаковка продукции">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/catalog-4-small-desktop.png 1x, img/catalog-4-small-desktop@2x.png 2x">
+              <img class="catalog-item__img catalog-item__img--small" src="img/catalog-4-small.png" srcset="img/catalog-4-small.png 1x, img/catalog-4-small@2x.png 2x" width="72" height="84" alt="Фиолетовая упаковка продукции">
+            </picture>
           </div>
           <div class="catalog-item__content">
             <div class="catalog-item__wrapper">
@@ -226,7 +256,7 @@
             <div class="extra__item">
               <p>Питьевая вода</p>
               <div>
-                <p>5 литров</p>
+                <p><span>5 литров</span></p>
                 <p>50 Р.</p>
               </div>
             </div>
@@ -236,7 +266,7 @@
             <div class="extra__item">
               <p>Молоко</p>
               <div>
-                <p>1 литр</p>
+                <p><span>1 литр</span></p>
                 <p>100 Р.</p>
               </div>
             </div>
@@ -280,29 +310,30 @@
     <div class="footer__wrapper">
       <div class="footer__logo">
         <a href="#page-start">
-          <img src="img/logo-text.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+          <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
         </a>
       </div>
 
-    <section class="socials">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="socials__list">
-        <li>
-          <a class="visually-hidden" href="">Вконтакте</a>
-        </li>
-        <li>
-          <a class="visually-hidden" href="">Инстаграм</a>
-        </li>
-        <li>
-          <a class="visually-hidden" href="">Фейсбук</a>
-        </li>
-      </ul>
-    </section>
-    <div class="footer__logo-academy">
-      <a href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
-      </a>
+      <section class="socials">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="socials__list">
+          <li>
+            <a class="visually-hidden" href="">Вконтакте</a>
+          </li>
+          <li>
+            <a class="visually-hidden" href="">Инстаграм</a>
+          </li>
+          <li>
+            <a class="visually-hidden" href="">Фейсбук</a>
+          </li>
+        </ul>
+      </section>
+      <div class="footer__logo-academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

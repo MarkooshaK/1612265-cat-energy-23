@@ -6,6 +6,10 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
 
   <body class="page__body">
@@ -14,24 +18,29 @@
       <div class="header__wrapper">
         <div class="header__logo">
           <a class="logo">
-            <img id="page-start" src="img/logo-cat.svg" width="34" height="38" alt="Логотип c котом">
-            <img src="img/logo-text.svg" width="101" height="18" alt="Логотип «Кэт энерджи»">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+              <img src="img/header-logo.svg" width="191" height="38" alt="Логотип «Кэт энерджи»">
+            </picture>
           </a>
         </div>
         <nav class="header__nav">
-          <button class="nav__toggle" type="button"><span class="nav__toggle--close visually-hidden">Меню</span></button>
-          <ul class="nav-list visually-hidden">
-            <div class="nav-list__wrapper">
-              <li class="nav-list__item">
-                <a class="nav-list__item--active">Главная</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="catalog.html">Каталог продукции</a>
-              </li>
-              <li class="nav-list__item">
-                <a href="form.html">Подбор программы</a>
-              </li>
-            </div>
+          <button class="nav__toggle " type="button"><span class="nav__toggle nav__toggle--close visually-hidden">Меню</span></button>
+          <ul class="nav-list ">
+            <li class="nav-list__wrapper">
+              <ul>
+                <li class="nav-list__item">
+                  <a class="nav-list__index nav-list__index--active">Главная</a>
+                 </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__index" href="catalog.html">Каталог продукции</a>
+                </li>
+                <li class="nav-list__item">
+                  <a class="nav-list__index" href="form.html">Подбор программы</a>
+                </li>
+              </ul>
+            </li>
           </ul>
         </nav>
       </div>
@@ -47,7 +56,11 @@
             питание для котов</h3>
           <p>Занялся собой? Займись котом!</p>
           <div class="promo__img">
-            <img src="img/index-can.png" width="280" height="270" alt="Баночка корма «Кэт энерджи»">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/index-can-desktop.png 1x, img/index-can-desktop@2x.png 2x">
+              <source media="(min-width: 768px)" srcset="img/index-can-tablet.png 1x, img/index-can-tablet@2x.png 2x">
+              <img src="img/index-can.png" srcset="img/index-can.png 1x, img/index-can@2x.png 2x"  width="280" height="270" alt="Баночка корма «Кэт энерджи»">
+            </picture>
           </div>
           <a class="promo__link" href="form.html">Подобрать программу</a>
       </div>
@@ -59,12 +72,12 @@
           <div class="catalog-select__item-slim">
             <h3>Похудение</h3>
             <p>Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-            <a href="catalog.html">Каталог slim &#8594;</a>
+            <a href="catalog.html">Каталог slim<span class="catalog-select__decor"></span></a>
           </div>
           <div class="catalog-select__item-pro">
             <h3>Набор массы</h3>
             <p>Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-            <a href="catalog.html">Каталог pro &#8594;</a>
+            <a href="catalog.html">Каталог pro<span class="catalog-select__decor"></span></a>
           </div>
         </div>
       </section>
@@ -105,12 +118,22 @@
               <dd>Затрачено времени</dd>
             </div>
           </dl>
-          <p>Затраты на питание: 15 000 руб. </p>
+          <p>Затраты на питание: <span class="example__cost-wrapper">15 000 руб.</span></p>
         </div>
         <div class="example__img">
-          <img src="img/cat-before.png" width="311" height="232" alt="Пример кота до использования питания">
+          <picture class="example__img-item1 visually-hidden">
+            <img src="img/cat-fat.png 1x, img/cat-fat@2x.png 2x" width="677" height="520" alt="Пример толстого кота">
+          </picture>
+          <picture class="example__img-item2">
+            <source media="(min-width: 1440px)" srcset="img/example-desktop.png 1x, img/example-desktop@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png 1x, img/image_cat_tablet@2x.png 2x">
+            <img src="img/cat-before.png" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x" width="311" height="232" alt="Пример кота до использования питания">
+          </picture>
+          <picture class="example__img-item3 visually-hidden">
+            <img src="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x" width="545" height="520" alt="Пример худого кота">
+          </picture>
         </div>
-        <div class="range__container">
+        <div class="range range__container">
           <form action="https://echo.htmlacademy.ru">
             <p>Было</p>
             <input type="range">
@@ -139,7 +162,7 @@
       <div class="footer__wrapper">
         <div class="footer__logo">
           <a href="#page-start">
-            <img src="img/logo-text.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+            <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
           </a>
         </div>
 

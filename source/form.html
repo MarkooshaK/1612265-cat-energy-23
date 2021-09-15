@@ -6,6 +6,10 @@
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
@@ -14,24 +18,29 @@
     <div class="header__wrapper">
       <div class="header__logo">
         <a class="logo" href="index.html">
-          <img id="page-start" src="img/logo-cat.svg" width="34" height="38" alt="Логотип c котом">
-          <img src="img/logo-text.svg" width="101" height="18" alt="Логотип «Кэт энерджи»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+            <img src="img/header-logo.svg" width="191" height="38" alt="Логотип «Кэт энерджи»">
+          </picture>
         </a>
       </div>
       <nav class="header__nav">
         <button class="nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
-        <ul class="nav-list visually-hidden">
-          <div class="nav-list__wrapper">
-            <li class="nav-list__item">
-              <a href="index.html">Главная</a>
-            </li>
-            <li class="nav-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="nav-list__item">
-              <a class="nav-list__item--active">Подбор программы</a>
-            </li>
-          </div>
+        <ul class="nav-list ">
+          <li class="nav-list__wrapper">
+            <ul>
+              <li class="nav-list__item">
+                <a href="index.html">Главная</a>
+              </li>
+              <li class="nav-list__item">
+                <a href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="nav-list__item">
+                <a class="nav-list__item-link nav-list__item-link--active">Подбор программы</a>
+              </li>
+            </ul>
+          </li>
         </ul>
       </nav>
     </div>
@@ -46,45 +55,47 @@
         <p>Заполните анкету, и мы подберем<br>
           программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru">
-          <fieldset class="form__block form__block-1">
-            <div class="block__item block__item-1">
-              <label for="cat-name">Имя:*</label>
-              <input type="text" id="cat-name" name="name" placeholder="Барсик">
-            </div>
-            <div class="block__item block__item-2">
-              <label for="cat-weight">Вес (кг):*</label>
-              <input type="number" id="cat-weight" name="weight" placeholder="7">
-            </div>
-            <div class="block__item block__item-3">
-              <label for="cat-age">Возраст (лет):</label>
-              <input type="number" id="cat-age" name="age" placeholder="7">
-            </div>
-          </fieldset>
-          <fieldset class="form__block form__block-2">
-            <div class="block-2__item">
-              <input type="radio" id="weight-loss" name="weight" value="weight-loss" checked>
-              <div class="block-2__item-container">
-                <span class="radio-button"></span>
-                <label for="weight-loss">Похудение</label>
+          <div class="form__block-wrapper">
+            <fieldset class="form__block form__block-1">
+              <div class="block__item block__item-1 block__item--error">
+                <label for="cat-name">Имя:*</label>
+                <input type="text" id="cat-name" name="name" placeholder="Барсик">
               </div>
-            </div>
-            <div class="block-2__item">
-              <input type="radio" id="weight-gain" name="weight" value="weight-gain">
-              <div class="block-2__item-container">
-                <span class="radio-button"></span>
-                <label for="weight-gain">Набор массы</label>
+              <div class="block__item block__item-2">
+                <label for="cat-weight">Вес (кг):*</label>
+                <input type="number" id="cat-weight" name="weight" placeholder="7">
               </div>
-            </div>
-            <div class="block-2__item">
-              <input type="radio" id="advice" name="weight" value="advice">
-              <div class="block-2__item-container">
-                <span class="radio-button"></span>
-                <label for="advice">Не знаю (нужен ваш совет)</label>
+              <div class="block__item block__item-3">
+                <label for="cat-age">Возраст (лет):</label>
+                <input type="number" id="cat-age" name="age" placeholder="7">
               </div>
-            </div>
-          </fieldset>
+            </fieldset>
+            <fieldset class="form__block form__block-2">
+              <div class="block-2__item">
+                <input type="radio" id="weight-loss" name="weight" value="weight-loss" checked>
+                <div class="block-2__item-container">
+                  <span class="radio-button"></span>
+                  <label for="weight-loss">Похудение</label>
+                </div>
+              </div>
+              <div class="block-2__item">
+                <input type="radio" id="weight-gain" name="weight" value="weight-gain">
+                <div class="block-2__item-container">
+                  <span class="radio-button"></span>
+                  <label for="weight-gain">Набор массы</label>
+                </div>
+              </div>
+              <div class="block-2__item">
+                <input type="radio" id="advice" name="weight" value="advice">
+                <div class="block-2__item-container">
+                  <span class="radio-button"></span>
+                  <label for="advice">Не знаю (нужен ваш совет)</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
           <fieldset class="form__block form__block-3">
-            <legend><span class="form__decor">Контактные данные (владельца кота)</span></legend>
+            <legend><span class="form__decor form__decor--item1">Контактные данные (владельца кота)</span></legend>
             <div class="block-3__wrapper">
               <div class="block-3__item-1">
                 <label for="email">E-mail:*</label>
@@ -97,11 +108,11 @@
             </div>
           </fieldset>
           <fieldset class="form__block form__block-4">
-            <legend>Комментарий</legend>
+            <legend><span class="form__decor form__decor--item2">Комментарий</span></legend>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
           <fieldset class="form__block form__block-5">
-            <legend>Дополнительно</legend>
+            <legend><span class="form__decor form__decor--item3">Дополнительно</span></legend>
             <div class="block-5__item">
               <input type="checkbox" id="extra1" name="extra1" checked>
               <div class="block-5__item-container">
@@ -131,8 +142,10 @@
               </div>
             </div>
           </fieldset>
-          <button type="submit">Отправить заявку</button>
-          <p>* — Обязательные поля</p>
+          <div class="block-5__button-wrapper">
+            <button type="submit">Отправить заявку</button>
+            <p>* — Обязательные поля</p>
+          </div>
         </form>
       </div>
     </section>
@@ -156,29 +169,30 @@
     <div class="footer__wrapper">
       <div class="footer__logo">
         <a href="#page-start">
-          <img src="img/logo-text.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
+          <img src="img/footer-logo.svg" width="128" height="24" alt="Логотип «Кэт энерджи»">
         </a>
       </div>
 
-    <section class="socials">
-      <h2 class="visually-hidden">Социальные сети</h2>
-      <ul class="socials__list">
-        <li>
-          <a class="visually-hidden" href="">Вконтакте</a>
-        </li>
-        <li>
-          <a class="visually-hidden" href="">Инстаграм</a>
-        </li>
-        <li>
-          <a class="visually-hidden" href="">Фейсбук</a>
-        </li>
-      </ul>
-    </section>
-    <div class="footer__logo-academy">
-      <a href="https://htmlacademy.ru/intensive/adaptive">
-        HTML Academy
-        <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
-      </a>
+      <section class="socials">
+        <h2 class="visually-hidden">Социальные сети</h2>
+        <ul class="socials__list">
+          <li>
+            <a class="visually-hidden" href="">Вконтакте</a>
+          </li>
+          <li>
+            <a class="visually-hidden" href="">Инстаграм</a>
+          </li>
+          <li>
+            <a class="visually-hidden" href="">Фейсбук</a>
+          </li>
+        </ul>
+      </section>
+      <div class="footer__logo-academy">
+        <a href="https://htmlacademy.ru/intensive/adaptive">
+          HTML Academy
+          <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
+        </a>
+      </div>
     </div>
   </footer>
 </body>

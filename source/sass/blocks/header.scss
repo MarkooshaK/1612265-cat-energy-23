@@ -1,11 +1,38 @@
+.header {
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    width: 100%;
+  }
+}
+
 .header__wrapper {
   margin: 0 20px;
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0 110px;
+  }
 }
 
 .header__logo {
   padding: 10px 0 15px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    width: 174px;
+    height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 1;
+    width: 202px;
+    padding-top: 54px;
+  }
 }
 
 .logo {
@@ -17,6 +44,11 @@
 
   img:last-child {
     padding: 0 65px 7px 0;
+
+    @media (min-width: $desktop-width) {
+      min-width: 202px;
+      min-height: 59px;
+    }
   }
 }
 
@@ -31,6 +63,11 @@
 .nav-list {
   padding: 0;
   list-style: none;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  width: 100%;
+  top: -15px;
 
   .nav-list__item a {
     font-size: 20px;
@@ -39,21 +76,46 @@
     text-decoration: none;
     font-weight: 500;
     text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: normal;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 20px;
+      line-height: 30px;
+
+      &.nav-list__index {
+        color: #ffffff;
+      }
+    }
   }
 }
 
-.nav-list__item a:hover:not(.nav-list__item--active) {
+.nav-list__item a:hover:not(.nav-list__index--active) {
   color: #666666;
 }
 
-.nav-list__item a:active:not(.nav-list__item--active) {
+.nav-list__item a:active:not(.nav-list__index--active) {
   color: #b3b3b3;
 }
 
-.nav-list__item--active {
+.nav-list__index--active {
+  border-bottom: 2px solid $basic_green;
+  padding: 10px 0 8px 0;
+
+  @media (min-width: $desktop-width) {
+    border-color: #ffffff;
+  }
+}
+
+.nav-list__item-link--active {
   border-bottom: 2px solid $basic_green;
   padding: 10px 0 8px 0;
 }
+
 
 .nav-list__wrapper {
   display: flex;
@@ -61,9 +123,31 @@
   position: absolute;
   width: 100%;
   left: 0;
-  top: 66px;
+  top: 64px;
   flex-direction: column;
   background: #ffffff;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    justify-content: flex-end;
+    left: -30px;
+    background: transparent;
+    align-items: center;
+    top: 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    left: -110px;
+    top: 52px;
+  }
+}
+
+.nav-list__wrapper ul {
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+  }
 }
 
 .nav-list__item {
@@ -72,10 +156,21 @@
   align-items: center;
   justify-content: center;
   border-top: 1px solid #e6e6e6;
+
+  &.nav-list__item:not(:nth-child(3)) {
+    @media (min-width: $tablet-width) {
+      padding-right: 35px;
+      border: none;
+    }
+  }
 }
 
 .nav-list__wrapper li:last-child {
   border-bottom: 1px solid #e6e6e6;
+
+  @media (min-width: $tablet-width) {
+    border: none;
+  }
 }
 
 .nav__toggle {
@@ -87,14 +182,18 @@
   border: 0;
   padding: 0;
   background-color: transparent;
-  border-bottom: 2px solid #c4c4c4;
-  border-top: 2px solid #c4c4c4;
+  border-bottom: 2px solid #000000;
+  border-top: 2px solid #000000;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   &::before {
     content: "";
     height: 2px;
     width: 24px;
-    background: #c4c4c4;
+    background: #000000;
     display: block;
     position: absolute;
     right: 0;
@@ -102,8 +201,18 @@
   }
 }
 
+.nav__toggle-hide {
+  border-bottom: none;
+  border-top: none;
+
+  &::before {
+    content: none;
+  }
+}
+
 .nav__toggle--close {
   color: transparent;
+  border-top: none;
 
   &::after {
     content: "";
@@ -112,7 +221,8 @@
     width: 25px;
     background-color: #000000;
     position: absolute;
-    bottom: 7px;
+    bottom: 34px;
+    right: -21px;
     transform: rotate(312deg);
   }
 
@@ -123,7 +233,8 @@
     width: 25px;
     background-color: #000000;
     position: absolute;
-    top: 5px;
+    top: -18px;
+    right: -21px;
     transform: rotate(48deg);
   }
 }
@@ -141,5 +252,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
+
+    @media (min-width: $tablet-width) {
+      content: none;
+    }
   }
 }
