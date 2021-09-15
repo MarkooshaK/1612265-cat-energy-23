@@ -7,6 +7,27 @@
   position: relative;
   border-bottom: 1px solid #ebebeb;
 
+  &::before {
+    content: "";
+    width: 100vw;
+    height: 2px;
+    background: #68b738;
+    position: absolute;
+    top: 40px;
+    left: 250px;
+    z-index: -1;
+
+    @media (min-width: $tablet-width) {
+      top: 47px;
+      left: 7px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 61px;
+      left: -110px;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     font-size: 36px;
     line-height: 36px;
@@ -17,6 +38,12 @@
   @media (min-width: $desktop-width) {
     padding: 39px 0 76px 0;
   }
+}
+
+.extra__decor {
+  background-color: #ffffff;
+  padding: 0 36px;
+  margin-left: -36px;
 }
 
 .extra__container {
@@ -170,11 +197,15 @@
         url("../../img/decor/catalog_gift-tablet.png") 1x,
         url("../../img/decor/catalog_gift-tablet@2x.png") 2x
       );
+      background-size: cover;
     }
 
     @media (min-width: $desktop-width) {
-      background-position: 245px 0;
       min-height: 100%;
+      background: image-set(
+        url("../../img/decor/catalog_gift.png") 1x,
+        url("../../img/decor/catalog_gift@2x.png") 2x
+      ) -33px no-repeat;
     }
   }
 }
