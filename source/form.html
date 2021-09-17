@@ -4,15 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>HTML Academy: Кэт энерджи</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <link rel="icon" href="favicon.ico">
-  <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
+  <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
   <link rel="manifest" href="manifest.webmanifest">
 </head>
 
-<body class="page__body">
+<body class="body">
 
   <header class="header header-form">
     <div class="header__wrapper">
@@ -25,7 +25,7 @@
           </picture>
         </a>
       </div>
-      <nav class="header__nav">
+      <nav class="nav">
         <button class="nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
         <ul class="nav-list ">
           <li class="nav-list__wrapper">
@@ -56,7 +56,7 @@
           программу питания для вашего кота</p>
         <form action="https://echo.htmlacademy.ru">
           <div class="form__block-wrapper">
-            <fieldset class="form__block form__block-1">
+            <fieldset class="form__block form__block-1 block">
               <div class="block__item block__item-1 block__item--error">
                 <label for="cat-name">Имя:*</label>
                 <input type="text" id="cat-name" name="name" placeholder="Барсик">
@@ -70,7 +70,7 @@
                 <input type="number" id="cat-age" name="age" placeholder="7">
               </div>
             </fieldset>
-            <fieldset class="form__block form__block-2">
+            <fieldset class="form__block form__block-2 block-2">
               <div class="block-2__item">
                 <input type="radio" id="weight-loss" name="weight" value="weight-loss" checked>
                 <div class="block-2__item-container">
@@ -94,7 +94,7 @@
               </div>
             </fieldset>
           </div>
-          <fieldset class="form__block form__block-3">
+          <fieldset class="form__block form__block-3 block-3">
             <legend><span class="form__decor form__decor--item1">Контактные данные (владельца кота)</span></legend>
             <div class="block-3__wrapper">
               <div class="block-3__item-1">
@@ -111,7 +111,7 @@
             <legend><span class="form__decor form__decor--item2">Комментарий</span></legend>
             <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Расскажите обо всех повадках кота"></textarea>
           </fieldset>
-          <fieldset class="form__block form__block-5">
+          <fieldset class="form__block form__block-5 block-5">
             <legend><span class="form__decor form__decor--item3">Дополнительно</span></legend>
             <div class="block-5__item">
               <input type="checkbox" id="extra1" name="extra1" checked>
@@ -142,7 +142,7 @@
               </div>
             </div>
           </fieldset>
-          <div class="block-5__button-wrapper">
+          <div class="form__button-wrapper">
             <button type="submit">Отправить заявку</button>
             <p>* — Обязательные поля</p>
           </div>
@@ -190,7 +190,7 @@
       <div class="footer__logo-academy">
         <a href="https://htmlacademy.ru/intensive/adaptive">
           HTML Academy
-          <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
+          <img src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
         </a>
       </div>
     </div>

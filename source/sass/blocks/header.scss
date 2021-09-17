@@ -35,32 +35,6 @@
   }
 }
 
-.logo {
-  text-decoration: none;
-  cursor: pointer;
-
-  img:first-child {
-    padding-right: 52px;
-  }
-
-  img:last-child {
-    padding: 0 65px 7px 0;
-
-    @media (min-width: $desktop-width) {
-      min-width: 202px;
-      min-height: 59px;
-    }
-  }
-}
-
-.logo:hover {
-  opacity: 80%;
-}
-
-.logo:active {
-  opacity: 60%;
-}
-
 .nav-list {
   padding: 0;
   list-style: none;

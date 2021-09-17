@@ -4,15 +4,15 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicon/favicon152.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon180.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
 
-  <body class="page__body">
+  <body class="body">
 
     <header class="header">
       <div class="header__wrapper">
@@ -25,7 +25,7 @@
             </picture>
           </a>
         </div>
-        <nav class="header__nav">
+        <nav class="nav">
           <button class="nav__toggle " type="button"><span class="nav__toggle nav__toggle--close visually-hidden">Меню</span></button>
           <ul class="nav-list ">
             <li class="nav-list__wrapper">
@@ -109,11 +109,11 @@
           <h3>Живой пример</h3>
           <p>Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
           <dl class="example__columns">
-            <div class="columns__item">
+            <div class="example__columns-item">
               <dt>5 кг</dt>
               <dd>Снижение веса</dd>
             </div>
-            <div class="columns__item">
+            <div class="example__columns-item">
               <dt>60 дней</dt>
               <dd>Затрачено времени</dd>
             </div>
@@ -122,7 +122,7 @@
         </div>
         <div class="example__img">
           <picture class="example__img-item1 visually-hidden">
-            <img src="img/cat-fat.png 1x, img/cat-fat@2x.png 2x" width="677" height="520" alt="Пример толстого кота">
+            <img src="img/cat-fat.png" srcset="img/cat-fat@2x.png 2x" width="677" height="520" alt="Пример толстого кота">
           </picture>
           <picture class="example__img-item2">
             <source media="(min-width: 1440px)" srcset="img/example-desktop.png 1x, img/example-desktop@2x.png 2x">
@@ -130,14 +130,14 @@
             <img src="img/cat-before.png" srcset="img/cat-before.png 1x, img/cat-before@2x.png 2x" width="311" height="232" alt="Пример кота до использования питания">
           </picture>
           <picture class="example__img-item3 visually-hidden">
-            <img src="img/cat-skinny.png 1x, img/cat-skinny@2x.png 2x" width="545" height="520" alt="Пример худого кота">
+            <img src="img/cat-skinny.png" srcset="img/cat-skinny@2x.png 2x" width="545" height="520" alt="Пример худого кота">
           </picture>
         </div>
-        <div class="range range__container">
+        <div class="range-container">
           <form action="https://echo.htmlacademy.ru">
             <p>Было</p>
             <input type="range">
-            <span class="range__border"></span>
+            <span class="range-container__border"></span>
             <p>Стало</p>
           </form>
         </div>
@@ -183,7 +183,7 @@
         <div class="footer__logo-academy">
           <a href="https://htmlacademy.ru/intensive/adaptive">
             HTML Academy
-            <img class="footer__logo-academy--img" src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
+            <img src="img/logo_html.svg" width="27" height="34" alt="Лого HTMLacademy">
           </a>
         </div>
       </div>
