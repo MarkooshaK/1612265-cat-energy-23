@@ -30,7 +30,7 @@
 
   &::before {
     content: "";
-    background: url("../../img/decor/cat_back-2.svg") no-repeat;
+    background: url("../img/decor/cat_back-2.svg") no-repeat;
     display: block;
     width: 50px;
     height: 53px;
@@ -72,7 +72,7 @@
 
   &::before {
     content: "";
-    background: url("../../img/decor/cat_back-1.svg") no-repeat;
+    background: url("../img/decor/cat_back-1.svg") no-repeat;
     display: block;
     width: 67px;
     height: 50px;
@@ -193,7 +193,7 @@
   content: "";
   width: 24px;
   height: 12px;
-  background: url("../../img/decor/icon-arrow-short.svg");
+  background: url("../img/decor/icon-arrow-short.svg");
   display: block;
   left: 100px;
   top: 1px;
@@ -206,13 +206,13 @@
 }
 
 .catalog-select__decor:hover::before {
-  background: url("../../img/decor/icon-arrow-long.svg");
+  background: url("../img/decor/icon-arrow-long.svg");
   width: 32px;
   height: 12px;
 }
 
 .catalog-select__decor:active::before {
-  background: url("../../img/decor/icon-arrow-long.svg");
+  background: url("../img/decor/icon-arrow-long.svg");
   width: 32px;
   height: 12px;
 }
