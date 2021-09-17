@@ -59,7 +59,8 @@
     background: image-set(
       url("../img/decor/index-back-desktop.png") 1x,
       url("../img/decor/index-back-desktop@2x.png") 2x
-    ) no-repeat 721px;
+    ) no-repeat 721px,
+      linear-gradient(90deg, #ffffff 50%, #64a73b 50%);
     margin-top: 0;
     background-size: 70%, cover;
   }

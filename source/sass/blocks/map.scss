@@ -9,4 +9,19 @@
 
 .map {
   background-color: #f2f2f2;
+  background: url("../img/decor/map-back.png");
+  height: 362px;
+  background-size: cover;
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/decor/map-back-2.png");
+    height: 400px;
+    background-size: cover;
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/decor/map-back-3.png");
+    height: 400px;
+    background-size: cover;
+  }
 }
